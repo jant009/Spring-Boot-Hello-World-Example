@@ -8,7 +8,7 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-	echo 'yes';
+	System.out.println("Les tests sont OK");
 	}
 
 }
