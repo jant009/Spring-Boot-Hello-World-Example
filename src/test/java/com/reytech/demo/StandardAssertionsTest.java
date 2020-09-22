@@ -30,7 +30,7 @@ class StandardAssertionsTest {
     
     @Test
     void groupedAssertions() {
-        Personne pers = new Personne("Nassur", "Moumadi");
+        Personne pers = new Personne("Nassur", "Moumadu");
 
         assertAll("personne", () -> assertEquals("Nassur", pers.getFirstName()),
                               () -> assertEquals("Moumadi", pers.getLastName()));
