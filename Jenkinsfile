@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-        maven 'localMaven'
+        maven 'localmaven'
     }
     
     stages {
@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "-=- Checkout project -=-"
-                git url: 'https://github.com/zaba221/Spring-Boot-Hello-World-Example.git'
+                git url: 'https://github.com/jant009/Spring-Boot-Hello-World-Example.git'
             }
         }
         
