@@ -119,12 +119,23 @@ pipeline {
                     sudo docker stop \$(docker ps -a -q);
                     sudo docker rm \$(docker ps -a -q);
                     sudo docker rmi -f \$(docker images -a -q);
-                    sudo docker run -d -p 8080:8089 jant009/springbootapp1; """
+                    sudo docker run -d -p 8089:8080 jant009/springbootapp1; """
                   )
                  ])
                ])
              }
           }
+        }
+		stage('Checkout Selenium') {
+            steps {
+                echo "-=- Checkout project -=-"
+                git url: 'https://github.com/jant009/example-springboot-automation-test-selenium.git'
+            }
+        }
+        stage('Selenium Test Job') {
+            steps {
+                 build job: 'projet-selenium' 
+            }
         }
 
 
