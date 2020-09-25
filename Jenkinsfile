@@ -93,8 +93,8 @@ pipeline {
                     sudo mv demo-0.0.1-SNAPSHOT.jar /home/vagrant/project;
                     cd project;
                     sudo docker build -t springbootapp1 . ;
-                    docker tag springbootapp1 jant009/springbootapp1:1.0
-                    docker push jant009/springbootapp1:1.0 """
+                    docker tag springbootapp1 jant009/springbootapp1:latest
+                    docker push jant009/springbootapp1:latest """
                   )
                  ])
                ])
@@ -119,7 +119,7 @@ pipeline {
                     sudo docker stop \$(docker ps -a -q);
                     sudo docker rm \$(docker ps -a -q);
                     sudo docker rmi -f \$(docker images -a -q);
-                    sudo docker run -d -p 8080:8089 jant009/springbootapp1:1.0; """
+                    sudo docker run -d -p 8080:8089 jant009/springbootapp1:latest; """
                   )
                  ])
                ])
