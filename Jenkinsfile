@@ -134,7 +134,7 @@ pipeline {
         }
         stage('Selenium Test Job') {
             steps {
-                 build job: 'projet-selenium' 
+                 build job: 'projet_selenium' 
             }
         }
 
