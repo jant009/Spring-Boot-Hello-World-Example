@@ -119,7 +119,7 @@ pipeline {
                     sudo docker stop \$(docker ps -a -q);
                     sudo docker rm \$(docker ps -a -q);
                     sudo docker rmi -f \$(docker images -a -q);
-                    sudo docker run -d -p 8080:8089 jant009/springbootapp1:latest; """
+                    sudo docker run -d -p 8080:8089 jant009/springbootapp1; """
                   )
                  ])
                ])
